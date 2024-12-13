@@ -8,7 +8,8 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/night.css">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +17,41 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown data-separator-vertical="^--$">
+					<script type="text/template">
+						![Title](img/title.excalidraw.png)
+						---
+						![About](img/about.excalidraw.png)
+						---
+						![Story](img/the-story.excalidraw.png)
+						---
+						![Timeline](img/timeline.excalidraw.png)
+						---
+						![mono](img/mono.excalidraw.png)
+						---
+						### Challenges<!-- .element: class="cyan"-->
+
+						* Amount of animations
+						* Only 64k of RAM memory
+						* Up to 256 characters used to build the background
+						* Time pressure
+						--
+						### Surprisingly no challenges<!-- .element: class="pink"-->
+
+						* Raster time
+						* Sprites limits
+						* Disk version (fast loader)
+						* Cartridge version (magicdesk)
+						---
+						Feedback and adding colours
+						---
+						How I made it
+						---
+						Challenges with colour version
+						---
+						Links
+					</script>
+				</section>
 			</div>
 		</div>
 
@@ -31,6 +65,10 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				width: 1200,
+				height: 700,
+				slideNumber: 'c/t',
+				autoPlayMedia: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
